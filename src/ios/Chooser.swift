@@ -14,7 +14,7 @@ class Chooser : CDVPlugin {
 	func callPicker (includeData: Bool, utis: [String]) {
 		let picker = ChooserUIDocumentPickerViewController(documentTypes: utis, in: .import)
 		picker.delegate = self
-		picker.includeData = includeData
+		picker.includeData = false
 		self.viewController.present(picker, animated: true, completion: nil)
 	}
 
